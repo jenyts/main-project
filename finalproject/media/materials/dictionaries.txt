@@ -1,0 +1,138 @@
+Defining a Dictionary
+
+Dictionaries are Python’s implementation of a data structure that is more generally known as an associative array. A dictionary consists of a collection of key-value pairs. Each key-value pair maps the key to its associated value.
+You can define a dictionary by enclosing a comma-separated list of key-value pairs in curly braces ({}). A colon (:) separates each key from its associated value:
+
+
+
+dict1={1:'3'}
+dictionary_name={<key>:<value>,<key>:<value>,<key>:<value>}
+
+
+
+Dictionaries and lists share the following characteristics:
+
+
+Both are mutable.
+Both are dynamic. They can grow and shrink as needed.
+Both can be nested. A list can contain another list. A dictionary can contain another dictionary.
+
+
+
+
+Dictionaries differ from lists primarily in how elements are accessed:
+
+
+List elements are accessed by their position in the list, via indexing.
+Dictionary elements are accessed via keys.
+
+
+
+
+A value is retrieved from a dictionary by specifying its corresponding key in square brackets ([]):
+
+
+lists and dicts are mutable but dont treat them as the same
+
+
+u cant perform slice in dict
+
+u cant append any values to dict
+
+
+
+Creating a dict from scratch
+--------------------------
+so as we have discussed a dict contains key value pairs
+
+so inorder to create one,
+You can start by creating an empty dictionary, which is specified by empty curly braces. Then you can add new keys and values one at a time
+
+info={}
+
+info['name']='hari'
+info['age']=26
+info['location']='kochi'
+info['experience']=5
+print(info)
+
+{'name': 'hari', 'age': 26, 'location': 'kochi', 'experience': 5}
+
+
+
+
+--------------------
+
+
+Restrictions on Dictionary Keys
+Almost any type of value can be used as a dictionary key in Python. 
+
+
+###1###
+First, a given key can appear in a dictionary only once. Duplicate keys are not allowed. A dictionary maps each key to a corresponding value, 
+so it doesn’t make sense to map a particular key more than once.
+
+d={1:'a',2:'b',1:'c',4:'d',1:'f',7:'g'}
+print(d)
+>>>{1: 'f', 2: 'b', 4: 'd', 7: 'g'}
+
+Similarly, if you specify a key a second time during the initial creation of a dictionary, the second occurrence will override the first:
+
+d={1:'a',2:'b',1:'c',4:'d',1:'f',7:'g'}
+print(d[1])
+>>f
+
+###2###
+Secondly, a dictionary key must be of a type that is immutable
+
+d={[1,2]:'a',2:'b',1:'c',4:'d',1:'f',7:'g'}
+print(d[1])
+>>>TypeError: unhashable type: 'list''
+
+so a tuple can be a key in dict since it is unmutable
+
+d={(1,2):'a',2:'b',1:'c',4:'d',1:'f',7:'g'}
+print(d[1])
+
+++
+there are no restrictions on dictionary values. Literally none at all. A dictionary value can be any type of object Python supports, including mutable types like lists and dictionaries, and user-defined objects
+++
+
+
+
+
+Built-in Dictionary Methods
+--------------------------------
+
+1.d.clear()
+
+Clears a dictionary.
+
+2.d.get(<key>)
+
+Returns the value for a key if it exists in the dictionary.
+
+3.d.items()
+
+Returns a list of key-value pairs in a dictionary.
+
+4.d.keys()
+
+Returns a list of keys in a dictionary.
+
+5.d.values()
+
+Returns a list of values in a dictionary.
+
+6.d.pop(<key>)
+
+Removes a key from a dictionary, if it is present, and returns its value.
+
+7.d.popitem()
+
+Removes a key-value pair from a dictionary.
+
+8.d.update(<obj>)
+
+Merges a dictionary with another dictionary or with an iterable of key-value pairs.
+

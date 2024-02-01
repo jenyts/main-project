@@ -1,0 +1,20 @@
+{% extends 'intro.html' %}
+{% block contents %}
+<div class="openingpage">
+    <div class="intro">
+        <h1>We welcomes You To Teachmint</h1>
+        <button><a href="{% url 'login' %}">LogIn</a></button>
+        <button><a href="{% url 'signin' %}">SignIn</a></button>
+    </div>
+</div>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                {{ message }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock %}

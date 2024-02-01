@@ -1,0 +1,14 @@
+{% extends 'intro.html' %}
+{% block contents %}
+<div class="sn-head">
+    <nav class="sndhead">
+        <a class="head" href="{% url 'home' %}">Summery</a>
+        <a class="head" href="{% url 'choise' %}">Study Materials</a>
+        <a class="head" href="{% url 'quiz_entry' %}">Quiz details</a>
+        <a class="head" href="{% url 'quiz' %}">Quiz</a>
+        <a class="head" href="{% url 'index' %}">Poll</a>
+        <a class="head" href="{% url 'choose' %}">Homework</a>
+        <a class="head" href="{% url 'course' %}">Course List</a>
+    </nav>
+</div>
+{% endblock %}

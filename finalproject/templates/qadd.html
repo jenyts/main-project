@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% block content %}
+<div class="qadd">
+    <form class="add_form" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <input class="upload" type="submit" value="Upload">
+    </form>  
+    
+</div>
+{% endblock %}
+

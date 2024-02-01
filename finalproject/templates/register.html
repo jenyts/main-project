@@ -1,0 +1,35 @@
+{% extends 'intro.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% block contents %}
+<form class="register" method="post">
+    <div class="signin">
+        {% csrf_token %}
+        <label>Username</label>
+        {{form.username}}
+        <label>Email</label>
+        {{form.email}}
+        <label>Password</label>
+        {{form.password1}}
+        <label>Password</label>
+        {{form.password2}}
+        <label>First Name</label>
+        {{form.first_name}}
+        <label>Last Name</label>
+        {{form.last_name}}
+        <button>Signin</button>
+        <button><a href="{% url 'open' %}">Back</a></button>
+    </div>
+</form>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                {{ message }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,37 @@
+Boolean Type, Boolean Context, and “Truthiness”
+=--------------------------------------------=
+
+Objects of Boolean type may have one of two values, True or False:
+
+True
+False
+
+
+Numeric Value
+A zero value is false.
+A non-zero value is true.
+
+
+print(bool(0), bool(0.0), bool(0.0+0j))
+False False False
+
+print(bool(-3), bool(3.14159), bool(1.0+1j))
+True True True
+
+
+String
+An empty string is false.
+A non-empty string is true.
+
+
+
+
+print(bool(''), bool(""), bool(""""""))
+False False False
+
+
+print(bool('hari'), bool(" "), bool(''' '''))	
+True True True
+
+
+

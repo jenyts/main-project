@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% block content %}
+<div class="hwqn">
+    <p>Homework</p>
+    <div>
+        {% for i in hwq %}
+        <a href="{% url 'hwanswer' %}"><p>{{ i.title }}</p></a>
+        <button class="ques"><a href="{% url 'hwqadd' %}">Upload</a></button>
+        {% endfor %}
+    </div>
+    <div class="btn">
+        {% if user.is_authenticated and user.is_superuser %}
+        <button class="ques"><a href="{% url 'hwqtnadd' %}">Add</a></button>
+        {% endif %}
+        <button class="ques"><a href="{% url 'choose' %}">Back</a></button>
+    </div>
+</div>
+{% endblock %}

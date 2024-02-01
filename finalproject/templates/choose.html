@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="choise">
+    <h3>Choose your course</h3>
+    {% for i in choozz %}
+    <a href="{% url 'material' i.name %}"><p>{{ i.name }}</p></a>
+    {% endfor %}
+</div>
+{% endblock %}
