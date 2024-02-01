@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="material_view">
+    <p>{{ study.title }}</p>
+    <a  href="{{study.material.url}}" download >download</a>
+</div>
+{% endblock %}

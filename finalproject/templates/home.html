@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% block content %}
+<div class="home">
+    <div class="home_in">
+
+        <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/nTQrV6_uhsg">
+        </iframe>
+
+        <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/hx-6DsF8ng0">
+        </iframe>
+        
+    </div>
+    <h2>About Teachmint</h2>
+</div>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                {{ message }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock %}

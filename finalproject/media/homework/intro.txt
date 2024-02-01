@@ -1,0 +1,94 @@
+in python everything is built using class
+
+object oreinted programming 
+
+one of the unique python specification of python is that python supports all different programming paradigms
+funstional
+object oreineted programming
+procedural programming
+
+homework
+difference btwn functional oop and procedural programming
+
+
+what and why objects
+
+in real world we use objects .
+like to call someone you need your phone
+or to eat food you use your plates
+
+so in real world everything is an object
+
+here we consider person as an object too
+
+like if u have a company and u have emplooyes to work on projects every emplooyes can be
+considered as an object
+and some emplooye object may use laptops which are also objects
+
+so everything is an object even person we treat them as an object
+
+
+object will have 2 things
+
+every object will have attributes
+every object will have behaviours
+
+attributes
+
+if i am an object my name can be an attribute my height can be a attribute etc
+
+things u know about an object
+
+behaviour
+
+when it comes to behavious i can walk i can sing am swimming am talking
+each can be considered as my behaviour
+
+thing an object does
+
+
+
+in objects attributes are basicaly data that defines an object
+in python we store data in variables
+so attribute  data values are stored in variables
+
+
+if u want to define the behaviour we need to use methods
+
+so what are methods
+so we know what functions are right
+
+functions in object oriented programming are called methods
+
+its similar but when we are using oop we need to thing in object term
+
+
+
+in oops we have different concepts like
+-object 
+-class
+-encapsulation
+-Abstraction
+-Polymorphism
+
+
+classes
+Classes provide a means of bundling data and functionality together.
+In object-oriented programming, a class is a template definition of the methods and variables in a particular kind of object. Thus, an object is a specific instance of a class; it contains real values instead of variables. 
+The class is one of the defining ideas of object-oriented programming.
+
+so basically class is a design/blueprint
+
+
+so if we want an object we need to create a class
+
+
+
+so how do we create a class
+ the way we define a function is bye using the def function name
+ similarly we define a class using class keyword
+
+ eg class Car:
+        attributes-->variables
+        behaviours-->methods(function)
+

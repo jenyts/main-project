@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% block content %}
+<div class="quiz">
+    <h3>Quiz Details</h3>
+    <div>
+        <p>The Quiz will start the moment you go to 'Quiz' in the head_tag.</p>
+        <p>The timer will began the moment you click the 'Quiz'.</p>
+        <p>The total score will display at the end.</p>
+        <p>You will have 10s for each question.</p>
+        <p>The correction is made instantly.</p>
+        <p>Negative mark will be counted if answer is incorrect.</p>
+    </div>
+</div>
+{% endblock %}

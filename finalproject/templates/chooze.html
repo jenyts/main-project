@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% block content %}
+<div class="chooze">
+    <h3>Choose your course</h3>
+    {% for i in choozz %}
+    <a href="{% url 'homeworkz' i.name %}"><p>{{ i.name }}</p></a>
+    {% endfor %}
+</div>
+{% endblock %}

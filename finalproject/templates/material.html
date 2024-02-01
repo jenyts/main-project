@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% block content %}
+<div class="study">
+    <div class="material">
+        <p>Study Materials</p>
+        {% for i in study %}
+        <p>{{ i.title }}</p>
+        <a  href="{{i.material.url}}" download >download</a>
+        {% endfor %}
+    </div>
+    {% if user.is_authenticated and user.is_superuser %}
+    <button><a href="{% url 'materialadd' %}">Upload</a></button>
+    {% endif %}
+    <button><a href="{% url 'choise' %}">Back</a></button>
+</div>
+{% endblock %}

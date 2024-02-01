@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% block content %}
+<div class="hwans">
+    {% for i in hwa %}
+    <div>
+        <p>{{ i.qstn }}</p>
+        <a href="/final/{{ i.ans }}" download >download</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
